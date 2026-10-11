@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Modern Store - Tech & Style</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            background-clip: text; /* Tambahkan baris ini */
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500/20 transition-all">
+                    <i class="fa-solid fa-cube text-amber-400 text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">Modern <span class="gradient-text">Store</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-300 text-sm">
+                <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="index.html#products" class="hover:text-amber-400 transition-colors">Products</a>
+                <a href="about.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">About</a>
+            </nav>
+
+            <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-amber-500/20">
+                <i class="fa-solid fa-store"></i>
+                <span>Shop Now</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+        
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-sparkles text-xs"></i> Elevate Your Lifestyle
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                Harmonizing <span class="gradient-text">Tech & Style</span> For Everyday Life
+            </h1>
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                Modern Store serves as a premier destination for modern individuals who demand high-tech innovation without sacrificing aesthetics and daily usability.
+            </p>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl text-center space-y-2 border border-slate-800">
+                <div class="text-3xl font-extrabold text-amber-400">100%</div>
+                <div class="text-xs text-slate-400 font-medium">Authentic & Guaranteed</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center space-y-2 border border-slate-800">
+                <div class="text-3xl font-extrabold text-amber-400">24/7</div>
+                <div class="text-xs text-slate-400 font-medium">Customer Support</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center space-y-2 border border-slate-800">
+                <div class="text-3xl font-extrabold text-amber-400">21c XE</div>
+                <div class="text-xs text-slate-400 font-medium">Oracle Database Engine</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center space-y-2 border border-slate-800">
+                <div class="text-3xl font-extrabold text-amber-400">Fast</div>
+                <div class="text-xs text-slate-400 font-medium">Node.js Express Backend</div>
+            </div>
+        </section>
+
+        <!-- Interactive Tabs (Vision, Mission & Performance) -->
+        <section class="space-y-8">
+            <div class="flex justify-center border-b border-slate-800 gap-4 sm:gap-8 text-sm font-medium">
+                <button onclick="switchTab('vision')" id="tab-vision" class="tab-btn pb-4 border-b-2 border-amber-400 text-amber-400 font-semibold transition-all">
+                    <i class="fa-solid fa-eye mr-2"></i> Our Vision
+                </button>
+                <button onclick="switchTab('mission')" id="tab-mission" class="tab-btn pb-4 border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition-all">
+                    <i class="fa-solid fa-bullseye mr-2"></i> Our Mission
+                </button>
+                <button onclick="switchTab('tech')" id="tab-tech" class="tab-btn pb-4 border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition-all">
+                    <i class="fa-solid fa-server mr-2"></i> Tech Stack
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="content-vision" class="tab-content glass-card p-8 sm:p-10 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    Redefining Modern Digital Commerce
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Our vision is to become a leading digital retail ecosystem that seamlessly merges curated high-tech gear and stylish apparel with robust, enterprise-grade system architecture that is fast, secure, and reliable.
+                </p>
+            </div>
+
+            <div id="content-mission" class="tab-content hidden glass-card p-8 sm:p-10 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    Commitment to Quality & Service
+                </h3>
+                <ul class="space-y-3 text-slate-300">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Curating top-tier tech and apparel items with rigorous quality standards.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Ensuring absolute transaction security using enterprise relational database infrastructure.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
+                        <span>Delivering an intuitive, highly responsive, and elegant user experience (UI/UX) across all devices.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="content-tech" class="tab-content hidden glass-card p-8 sm:p-10 rounded-3xl border border-slate-800 space-y-4">
+                <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                    Integrated Enterprise Architecture
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                    This platform is engineered using a modern decoupled architecture (RESTful API), powered by **Oracle Database 21c Express Edition (XE)** for high-performance relational data management, alongside **Node.js & Express** middleware for fast, scalable server processing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Values Card Grid -->
+        <section class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-bold text-white">Why Choose Modern Store?</h2>
+                <p class="text-slate-400 text-sm">Core values driving our customer experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all group space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Enterprise Security</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Powered by a centralized Oracle DB backend to ensure strict data integrity, ACID compliance, and customer privacy.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all group space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Lightning Fast</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Optimized backend endpoints deliver instant product catalog retrieval and rapid order processing.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all group space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Premium Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Crafted with modern Tailwind CSS styling for a clean, sophisticated, and visually appealing dark aesthetic.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-slate-800/80 py-8 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Modern Store. Built with Node.js & Oracle Database 21c XE.</p>
+            <div class="flex items-center gap-6 text-slate-400">
+                <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="index.html#products" class="hover:text-amber-400 transition-colors">Products</a>
+                <a href="about.html" class="hover:text-amber-400 transition-colors">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-amber-400', 'text-amber-400', 'font-semibold');
+                btn.classList.add('border-transparent', 'text-slate-400');
+            });
+
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+
+            const activeBtn = document.getElementById('tab-' + tabName);
+            activeBtn.classList.add('border-amber-400', 'text-amber-400', 'font-semibold');
+            activeBtn.classList.remove('border-transparent', 'text-slate-400');
+        }
+    </script>
+</body>
+</html>

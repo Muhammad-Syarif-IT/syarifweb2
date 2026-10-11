@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Store | Tech & Style</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Modern<span>Store</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="about.html" target="_blank">About</a>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="total-items">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Elevate Your Lifestyle</h1>
+            <p>Discover premium tech and apparel curated for the modern individual.</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="container section-padding">
+        <h2 class="section-title">Latest Arrivals</h2>
+        <div class="product-grid" id="product-list">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light section-padding">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="#" class="logo">Modern<span>Store</span></a>
+                <p>&copy; 2023 Modern Store Inc. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="privacy.html" target="_blank">Privacy Policy</a>
+                <a href="terms.html" target="_blank">Terms of Service</a>
+                <a href="contact.html" target="_blank">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Bag</h3>
+                <i class="fas fa-times close-cart"></i>
+            </div>
+            <div class="cart-content">
+                <!-- Cart items go here -->
+            </div>
+            <div class="cart-footer">
+                <div class="total">
+                    <p>Subtotal:</p>
+                    <p class="cart-total-price">$0.00</p>
+                </div>
+                <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+                <button class="btn-clear clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAYMENT MODAL (Simulated) -->
+    <div class="payment-modal-overlay">
+        <div class="payment-modal">
+            <i class="fas fa-times close-payment"></i>
+            <h2>Secure Payment (Simulation)</h2>
+            <div class="payment-method">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+            </div>
+            <form id="payment-form">
+                <input type="text" placeholder="Cardholder Name" required>
+                <input type="text" placeholder="Card Number (e.g., 1234 5678 1234 5678)" maxlength="19" required>
+                <div class="form-row">
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                    <input type="text" placeholder="CVC" maxlength="3" required>
+                </div>
+                <button type="submit" class="btn-primary pay-now-btn">Pay $0.00</button>
+            </form>
+            <div class="payment-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Payment Successful!</h3>
+                <p>Thank you for your purchase. Your order is being processed.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Modern Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center group-hover:bg-amber-500/20 transition-all">
+                    <i class="fa-solid fa-cube text-amber-400 text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">Modern <span class="gradient-text">Store</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-300 text-sm">
+                <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="index.html#products" class="hover:text-amber-400 transition-colors">Products</a>
+                <a href="about.html" class="hover:text-amber-400 transition-colors">About</a>
+            </nav>
+            <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-amber-500/20">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Store</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-12">
+        <div class="text-center space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-file-contract"></i> Legal Agreements
+            </div>
+            <h1 class="text-4xl font-extrabold text-white">Terms of <span class="gradient-text">Service</span></h1>
+            <p class="text-slate-400 text-sm">Last updated: October 2026</p>
+        </div>
+
+        <div class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-800 space-y-8 text-slate-300 leading-relaxed text-sm sm:text-base">
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-handshake text-amber-400"></i> 1. Acceptance of Terms
+                </h2>
+                <p>By accessing or using Modern Store, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-box text-amber-400"></i> 2. Product Information & Pricing
+                </h2>
+                <p>We strive to display accurate product descriptions, image assets, and pricing. All items are subject to availability, and prices may be adjusted without prior notice based on catalog management.</p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-credit-card text-amber-400"></i> 3. Orders & Payments
+                </h2>
+                <p>Placing an order constitutes an offer to purchase. Transactions are recorded in our database and validated before fulfillment. We reserve the right to cancel orders suspected of fraudulent activity.</p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-copyright text-amber-400"></i> 4. Intellectual Property
+                </h2>
+                <p>All brand graphics, custom design components, and codebase built for Modern Store belong exclusively to the platform authors and are protected under copyright guidelines.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-slate-800/80 py-8 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Modern Store. Built with Node.js & Oracle Database 21c XE.</p>
+    </footer>
+</body>
+</html>
